@@ -8,26 +8,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ApiResponse } from "@/utils/types";
+import { ApiResponse, ResultData } from "@/utils/types";
 import { Loader2 } from "lucide-react";
 
 const PING_INTERVAL = 5000;
-
-type SymbolType = "sell" | "buy";
-
-interface Trade {
-  id: number;
-  time: number;
-  price: string;
-  amount: string;
-  type: SymbolType;
-}
-
-interface ResultData {
-  method: string;
-  params: [name: string, trades: Trade[]];
-  id: number;
-}
 
 export default function SymbolCard({ item }: { item: ApiResponse }) {
   const socketRef = useRef<WebSocket | null>(null);
