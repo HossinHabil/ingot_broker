@@ -2,7 +2,7 @@ import { env } from "@/env";
 import { ApiResponse } from "@/utils/types";
 import SymbolCard from "./_components/SymbolCard";
 import { Suspense } from "react";
-import SymbolCardsSkeleton from "./_components/SymbolCardSkeleton";
+import SymbolCardsSkeleton from "./_components/SymbolCardsSkeleton";
 
 export default function Home() {
 
