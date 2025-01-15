@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex items-center justify-center">
-      <div className="max-w-7xl mx-auto w-full flex flex-col justify-center items-center space-y-8">
+      <div className="max-w-7xl mx-auto w-full flex flex-col justify-center items-center space-y-8 py-8 px-4">
         <h2 className="text-primary-foreground text-2xl md:text-3xl lg:text-4xl">Ingot Broker Assessment</h2>
         <Suspense fallback={<SymbolCardsSkeleton />}>
           <GetSymbols />
