@@ -10,14 +10,14 @@ export default function SymbolCardsSkeleton() {
   );
 }
 
-function SymbolCardSkeleton({ className }: { className?: string }) {
+export function SymbolCardSkeleton({ className }: { className?: string }) {
   return (
     <div
-      className={`max-w-[265px] h-[194px] flex flex-col items-center justify-around space-y-4 bg-card rounded-md p-4 mx-auto w-full ${className}`}
+      className={`w-[300px] h-[200px] flex flex-col justify-around space-y-4 bg-card rounded-md p-4 ${className}`}
     >
-      <Skeleton className="h-8 w-[250px] bg-card-foreground" />
-      <Skeleton className="h-4 w-[250px] bg-card-foreground" />
-      <Skeleton className="h-4 w-[250px] bg-card-foreground" />
+      <Skeleton className="h-8 w-[200px] bg-card-foreground" />
+      <Skeleton className="h-4 w-[200px] bg-card-foreground" />
+      <Skeleton className="h-4 w-[200px] bg-card-foreground" />
     </div>
   );
 }

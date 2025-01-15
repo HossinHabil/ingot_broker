@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ApiResponse, ResultData } from "@/utils/types";
-import { Loader2 } from "lucide-react";
+import { SymbolCardSkeleton } from "./SymbolCardsSkeleton";
 
 const PING_INTERVAL = 5000;
 
@@ -100,7 +100,7 @@ export default function SymbolCard({ item }: { item: ApiResponse }) {
   if (!result) {
     return (
       <Card className="w-[300px] h-[200px] flex flex-col justify-center items-center">
-        <Loader2 className="animate-spin my-3 mx-auto size-5" />
+        <SymbolCardSkeleton />
       </Card>
     );
   }
