@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "INGOT",
-  description: "INGOT Assessment",
+  title: "INGOT BROKERS",
+  description: "INGOT Brokers Assessment",
 };
 
 export default function RootLayout({
