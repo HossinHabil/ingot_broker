@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { ApiResponse, ResultData } from "@/utils/types";
 import { SymbolCardSkeleton } from "./SymbolCardsSkeleton";
+import { env } from "@/env";
 
 const PING_INTERVAL = 5000;
 
@@ -44,7 +45,7 @@ export default function SymbolCard({ item }: { item: ApiResponse }) {
       socketRef.current.close();
     }
 
-    const socket = new WebSocket("wss://api.whitebit.com/ws");
+    const socket = new WebSocket(env.NEXT_PUBLIC_API_WHITEBIT_WS);
     socketRef.current = socket;
 
     socket.onopen = () => {
